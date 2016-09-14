@@ -75,9 +75,14 @@
                         <span class="m-r-sm text-muted welcome-message">Welcome to Belis Admin Theme.</span>
                     </li>
                     <li>
-                        <a href="login.html">
+                        <a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
                             <i class="fa fa-sign-out"></i> Log out
                         </a>
+
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
                     </li>
                 </ul>
 
