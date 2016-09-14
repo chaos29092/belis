@@ -1,0 +1,98 @@
+/*
+Powered by ly200.com		http://www.ly200.com
+广州联雅网络科技有限公司		020-83226791
+*/
+
+/*global css*/
+/* body,html,h1,h2,h3,h4,h5,h6,big,small,sub,sup,input,select,textarea{font-size:12px; color:#333; -webkit-text-size-adjust:none; outline:0; font-family:Arial, Helvetica, sans-serif;} */
+header,footer,section,aside,nav,hgroup,figure,figcaption{display:block; margin:0; padding:0; border:none;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,blockquote{padding:0; margin:0;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+li{list-style-type:none;}
+img{max-width:100%; max-height:100%; border:none;}
+input[type='text'],input[type='number'],input[type='password'],input[type='reset'],input[type='submit'],input[type='button'],input[type='tel'],button,textarea{-webkit-appearance:none; border-radius:0; border:1px solid #ddd;}
+textarea{resize:none;}
+
+/*文字大小，颜色，行距定义*/
+.fz_12px{font-size:12px;}
+.fz_14px{font-size:14px;}
+.fz_16px{font-size:16px;}
+.fc_red{color:#ff0000;}
+.fc_grey{color:#aaa;}
+.fc_gory{color:#666;}
+.fc_white{color:#fff;}
+.fc_yellow{color:#ff6600;}
+.flh_150{line-height:150%;}
+.flh_180{line-height:180%;}
+
+/*float*/
+.fl{float:left;}
+.fr{float:right;}
+/*切换货币价格*/
+
+/*form*/
+.form_input{color:#333; height:20px; line-height:20px;}
+.form_area{color:#333; line-height:180%; resize:none; overflow:auto;}
+.form_button{border:none; background:#505050; color:#fff; height:22px; line-height:22px; padding:0 5px; overflow:hidden; width:80px; cursor:pointer;}
+.form_focus{border-color:red;}
+.form_input.center{text-align:center;}
+
+/*padding*/
+.clear{margin:0px auto; clear:both; height:0px; font-size:0px; overflow:hidden;}
+.blank3{margin:0px auto; clear:both; height:3px; font-size:1px; overflow:hidden;}
+.blank6{margin:0px auto; clear:both; height:6px; font-size:1px; overflow:hidden;}
+.blank9{margin:0px auto; clear:both; height:9px; font-size:1px; overflow:hidden;}
+.blank12{margin:0px auto; clear:both; height:12px; font-size:1px; overflow:hidden;}
+.blank15{margin:0px auto; clear:both; height:15px; font-size:1px; overflow:hidden;}
+.blank20{margin:0px auto; clear:both; height:20px; font-size:1px; overflow:hidden;}
+.blank25{margin:0px auto; clear:both; height:25px; font-size:1px; overflow:hidden;}
+.clean{zoom:1;}
+.clean:after,.clean:before{content:''; display:table;}
+.clean:after{clear:both;}
+/*a*/
+a{color:#333; text-decoration:none;}
+a:hover{text-decoration:underline;}
+a.red{color:red; text-decoration:none;}
+a.red:hover{color:red; text-decoration:underline;}
+/*turn page*/
+#turn_page{text-align:center; height:35px; line-height:35px; clear:both;}
+#turn_page li{border:1px none solid; display:inline-block; *display:inline; *zoom:1; font-size:14px; height:30px; line-height:30px; overflow:hidden; background:#fff; color:#fff; vertical-align:top; margin:0 4px; border-radius:4px; -ms-border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;border:1px solid #cecece}
+#turn_page li em{width:7px; height:12px; display:inline-block; vertical-align:middle; margin-top:-2px;}
+#turn_page font, #turn_page a{width:32px; height:30px;color:#606569; display:block; text-align:center; text-decoration:none;}
+#turn_page .page_item_current{background:#00539A; color:#fff; cursor:default;}
+#turn_page .page_button, #turn_page .page_noclick{width:auto; padding:0 12px;}
+#turn_page .page_noclick{cursor:no-drop;}
+
+
+
+/************************************************************/
+.pic_box em{vertical-align:middle; height:100%; display:inline-block;}
+.pic_box img{vertical-align:middle;}
+.error, .error_info{color:#900; margin:0; font-family:Verdana;}
+/***** clear(清除浮动) start *****/
+.clearfix:after{content:"."; display:block; clear:both; visibility:hidden; line-height:0; height:0;}
+.clearfix{display:inline-block;}
+html[xmlns] .clearfix{display:block;}
+* html .clearfix{height:1%;}
+/***** clear(清除浮动) end *****/
+
+/***** loading start *****/
+.loading{z-index:100; position:absolute; background:#ccc; top:0; left:0; width:100%; height:100%;}
+.loading_big{background:url(../images/global/loading.gif) no-repeat; z-index:9999; position:absolute; width:32px; height:32px; cursor:wait;}
+.loading_small{background:url(../images/global/loading_small.gif) no-repeat; z-index:9999; position:absolute; width:14px; height:14px; cursor:wait;}
+/***** loading end *****/
+
+
+/***** 浮动窗 start *****/
+#float_window{ width:72px; padding:1px; border-radius:5px; background:#37bd9c; position:fixed; right:20px; top:150px; z-index:1111;}
+#inner_window{ width:72px; border-radius:5px 5px 0 0; min-height:90px; background:#fff; overflow:hidden;}
+#demo_window{ width:43px; margin:0 auto; margin-top:15px;}
+#demo_window a{ display:block; width:43px; height:43px;}
+#demo_window a.QQ{ background:url(../images/global/qq.png) no-repeat center top;}
+#demo_window a.Skype{ background:url(../images/global/skype.png) no-repeat center top;}
+#demo_window a.Email{ background:url(../images/global/email.png) no-repeat center top;}
+#demo_window a.trademanager{ background:url(../images/global/ali.png) no-repeat center top;}
+#demo_window div{background:#fff;}
+#go_top{ display:block; height:24px; line-height:24px; color:#fff; text-align:center; font-size:14px;}
+#go_top:hover{ text-decoration:none;}
+/***** 浮动窗 end *****/
