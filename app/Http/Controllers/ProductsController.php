@@ -14,6 +14,11 @@ class ProductsController extends Controller
         $this->middleware('auth');
     }
 
+    public function home()
+    {
+        return view('admin.products');
+    }
+
     public function index()
     {
         return view('admin.products');

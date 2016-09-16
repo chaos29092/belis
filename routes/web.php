@@ -40,6 +40,12 @@ Route::get('contact-us',function(){
 
 Auth::routes();
 
-
+Route::get('home','ProductsController@home');
 Route::resource('/admin/products', 'ProductsController');
 Route::resource('/admin/categories', 'CategoriesController');
+
+Route::group(['prefix' => 'api'], function ()
+{
+    Route::post('image', ['middleware' => 'auth', 'uses' => 'Api\ImageController@store']);
+    Route::get('image/{image}', 'Api\ImageController@view');
+});

@@ -1,7 +1,7 @@
 @extends('layouts.admin_master')
 
 @section('add_css')
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <link href="{{asset('backend/css/plugins/summernote/summernote.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/plugins/summernote/summernote-bs3.css')}}" rel="stylesheet">
 
@@ -151,13 +151,13 @@
     <script src="{{asset('backend/js/plugins/datapicker/bootstrap-datepicker.js')}}"></script>
 
     <script>
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-        $(document).ready(function(){
 
+        $(document).ready(function(){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
         $('#content').summernote({
             height: 300,
             focus: true,
