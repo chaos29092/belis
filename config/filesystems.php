@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'local',
+    'default' => 'pub',
 
     /*
     |--------------------------------------------------------------------------
@@ -62,6 +62,10 @@ return [
             'bucket' => 'your-bucket',
         ],
 
+        'pub'=>[
+            'driver'=>'local',
+            'root'=>public_path('app')
+        ]
     ],
 
 ];
