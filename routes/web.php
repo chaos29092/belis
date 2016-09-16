@@ -10,7 +10,6 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
 Route::get('/', function () {
     return view('index');
 });
@@ -38,7 +37,9 @@ Route::get('faq',function(){
 Route::get('contact-us',function(){
     return view('contact_us') ;
 });
+
 Auth::routes();
 
-Route::get('/home', 'AdminController@index');
 
+Route::resource('/admin/products', 'ProductsController');
+Route::resource('/admin/categories', 'CategoriesController');

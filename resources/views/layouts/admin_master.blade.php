@@ -14,6 +14,8 @@
     <link href="{{asset('backend/css/animate.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/style.css')}}" rel="stylesheet">
 
+    @yield('add_css')
+
 </head>
 
 <body>
@@ -38,19 +40,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span
-                                class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="index.html">Dashboard v.1</a></li>
-                        <li><a href="dashboard_2.html">Dashboard v.2</a></li>
-                        <li><a href="dashboard_3.html">Dashboard v.3</a></li>
-                        <li><a href="dashboard_4_1.html">Dashboard v.4</a></li>
-                        <li><a href="dashboard_5.html">Dashboard v.5 <span
-                                        class="label label-primary pull-right">NEW</span></a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span></a>
+                    <a href="/admin/products"><i class="fa fa-edit"></i> <span class="nav-label">Products</span></a>
                 </li>
             </ul>
 
@@ -61,7 +51,7 @@
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
-                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="table_basic.html#"><i
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
                                 class="fa fa-bars"></i> </a>
                     <form role="search" class="navbar-form-custom" action="search_results.html">
                         <div class="form-group">
@@ -89,25 +79,7 @@
             </nav>
         </div>
 
-        <div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-10">
-                <h2>Static Tables</h2>
-                <ol class="breadcrumb">
-                    <li>
-                        <a href="/home">Home</a>
-                    </li>
-                    <li>
-                        <a>Tables</a>
-                    </li>
-                    <li class="active">
-                        <strong>Static Tables</strong>
-                    </li>
-                </ol>
-            </div>
-            <div class="col-lg-2">
-
-            </div>
-        </div>
+        @yield('header')
 
         @yield('content')
 
@@ -148,6 +120,8 @@
         });
     });
 </script>
+
+@yield('add_js')
 
 </body>
 
