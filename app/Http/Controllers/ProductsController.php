@@ -77,8 +77,9 @@ class ProductsController extends Controller
     public function edit(Product $product)
     {
         $categories = Category::all();
+        $files = Storage::files('products/'.$product->id);
 
-        return view('admin.product_edit',compact('product','categories'));
+        return view('admin.product_edit',compact('product','categories','files'));
     }
 
     public function update(Request $request,Product $product)
@@ -140,7 +141,7 @@ class ProductsController extends Controller
     {
         if(\Request::file('file')){
             if (\Request::file('file')->isValid()){
-                $destinationPath='./uploads/products/'.$id.'/';
+                $destinationPath='./app/products/'.$id.'/';
                 $filename=uniqid().'.'.\Request::file('file')
                         ->guessClientExtension();
                 \Request::file('file')->move($destinationPath,$filename);

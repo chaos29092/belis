@@ -35,6 +35,7 @@
                 <div class="tabs-container">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="ecommerce_product.html#tab-1"> Product info</a></li>
+                        <li class=""><a data-toggle="tab" href="ecommerce_product.html#tab-2"> Images</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane active">
@@ -63,17 +64,17 @@
 
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label" for="category_pic">分类页主图（230*230）</label>
-                                            <div class="col-sm-10"><input name="category_pic" type="file" /></div>
+                                            <div class="col-sm-2"><input name="category_pic" type="file" /></div>
                                             @if($product['category_pic'])
-                                                <img src="{{$product['category_pic']}}" alt="{{$product['name']}}" width="200">
+                                                <img class="col-sm-2" src="{{$product['category_pic']}}" alt="{{$product['name']}}">
                                             @endif
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label" for="main_pic">产品主图（5:4左右）</label>
-                                            <div class="col-sm-10"><input name="main_pic" type="file" /></div>
+                                            <div class="col-sm-2"><input name="main_pic" type="file" /></div>
                                             @if($product['main_pic'])
-                                                <img src="{{$product['main_pic']}}" alt="{{$product['name']}}" width="200">
+                                                <img class="col-sm-2" src="{{$product['main_pic']}}" alt="{{$product['name']}}" width="200">
                                             @endif
                                         </div>
 
@@ -111,14 +112,51 @@
                                 </fieldset>
                             </div>
                         </div>
+                        <div id="tab-2" class="tab-pane">
+                            <div class="panel-body">
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-stripped">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Image preview
+                                            </th>
+                                            <th>
+                                                Image url
+                                            </th>
+                                            <th>
+                                                Actions
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($files as $f)
+                                        <tr>
+                                            <td>
+                                                <img src="{{'/app/'.$f}}" width="100">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" disabled value="{{url('/app/'.$f)}}">
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-
-
 
 @endsection
 
@@ -155,7 +193,7 @@
                 });
             }
             $('#content').summernote({
-                height: 200,
+                height: 300,
                 onImageUpload: function(files, editor, welEditable) {
                     sendFile(files[0], editor, welEditable);
                 }

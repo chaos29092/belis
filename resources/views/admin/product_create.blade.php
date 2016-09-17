@@ -73,7 +73,7 @@
                                         <div class="col-sm-10"><input type="text" class="form-control" placeholder="产品页简介" name="des" ></div>
                                     </div>
 
-                                    <div class="form-group"><label class="col-sm-2 control-label">Description:</label>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Description(只能编辑时插入图片，新建时不行):</label>
                                         <div class="col-sm-10">
                                             <textarea class="form-control" rows="2" id="content" name="content"></textarea>
                                         </div>
@@ -114,32 +114,11 @@
     <script>
 
         $(document).ready(function(){
-//            $.ajaxSetup({
-//                headers: {
-//                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//                }
-//            });
             $('#content').summernote({
                 height: 300,
-                placeholder:'Content here...'
+                placeholder:'Content here...',
             });
-
-
-//        function uploadImage(file) {
-//            data = new FormData();
-//            data.append("file", file);
-//            $.ajax({
-//                data: data,
-//                type: 'POST',
-//                url: '/api/image',
-//                cache: false,
-//                contentType: false,
-//                processData: false,
-//                success: function (url) {
-//                    $('#content').summernote('insertImage', url);
-//                }
-//            });
-//        }
         })
+
     </script>
 @endsection
