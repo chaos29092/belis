@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Model\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use DB;
 
 
 class ProductsController extends Controller
@@ -17,7 +16,10 @@ class ProductsController extends Controller
 
     public function index()
     {
-        return view('admin.products');
+        $products = Product::orderBy('updated_at', 'desc')->select('id','name','category_id','updated_at')->paginate(2);
+        $categories = \App\Model\Category::all();
+
+        return view('admin.products',compact('products','categories'));
     }
 
     public function create()

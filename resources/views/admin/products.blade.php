@@ -48,48 +48,34 @@
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($products as $product)
                             <tr>
                                 <td>
-                                    Example product 1
+                                    {{$product->name}}
                                 </td>
                                 <td>
-                                    Model 1
+                                    {{$categories->find($product['category_id'])['name']}}
                                 </td>
                                 <td>
-                                    today
+                                    {{$product->updated_at}}
                                 </td>
                                 <td class="text-right">
                                     <div class="btn-group">
                                         <button class="btn-white btn btn-xs">View</button>
-                                        <a href="/admin/products/1/edit"><button class="btn-white btn btn-xs">Edit</button></a>
+                                        <a href="/admin/products/{{$product->id}}/edit"><button class="btn-white btn btn-xs">Edit</button></a>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    Example product 1
-                                </td>
-                                <td>
-                                    Model 1
-                                </td>
-                                <td>
-                                    today
-                                </td>
-                                <td class="text-right">
-                                    <div class="btn-group">
-                                        <button class="btn-white btn btn-xs">View</button>
-                                        <button class="btn-white btn btn-xs">Edit</button>
-                                    </div>
-                                </td>
-                            </tr>
+                            @endforeach
                             </tbody>
                             <tfoot>
                             <tr>
                                 <td colspan="6">
-                                    <ul class="pagination pull-right"></ul>
+                                    {{$products->render()}}
                                 </td>
                             </tr>
                             </tfoot>
+
                         </table>
 
                     </div>
@@ -100,16 +86,5 @@
 @endsection
 
 @section('add_js')
-    <!-- FooTable -->
-    <script src="{{asset('backend/js/plugins/footable/footable.all.min.js')}}"></script>
 
-    <!-- Page-Level Scripts -->
-    <script>
-        $(document).ready(function() {
-
-            $('.footable').footable();
-
-        });
-
-    </script>
 @endsection
