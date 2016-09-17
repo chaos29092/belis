@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use DB;
 
 
 class ProductsController extends Controller
@@ -14,13 +15,25 @@ class ProductsController extends Controller
         $this->middleware('auth');
     }
 
-    public function home()
+    public function index()
     {
         return view('admin.products');
     }
 
-    public function index()
+    public function create()
     {
+        $categories = \App\Model\Category::all();
+        return view('admin.product_create',compact('categories'));
+    }
+
+    public function store(Request $request)
+    {
+        $product = New \App\Model\Product();
+
+        $product->name = $request['name'];
+
+        $product->save();
+
         return view('admin.products');
     }
 
@@ -28,6 +41,18 @@ class ProductsController extends Controller
     {
         $categories = \App\Model\Category::all();
         return view('admin.product_edit',compact('product','categories'));
+    }
+
+    public function update(Request $request,$id)
+    {
+        $product = \App\Model\Product::find($id);
+
+        $product->name = $request['name'];
+        $product->content = $request['content'];
+
+        $product->save();
+
+        return back();
     }
 
 

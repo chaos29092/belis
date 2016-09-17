@@ -10,6 +10,8 @@ class Category extends Model
         'name',
         'category_pic',
         'category_des',
+        'title',
+        'description',
     ];
 
     public function products()

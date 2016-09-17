@@ -27,7 +27,7 @@
 
     <div class="wrapper wrapper-content animated fadeInRight ecommerce">
         <div class="ibox-content m-b-sm border-bottom">
-            <a href="#">
+            <a href="/admin/products/create">
                 <button type="button" class="btn btn-w-m btn-primary">Create Product</button>
             </a>
         </div>

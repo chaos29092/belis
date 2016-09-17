@@ -11,13 +11,13 @@
 @section('header')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>Products Edit</h2>
+            <h2>Products Create</h2>
             <ol class="breadcrumb">
                 <li>
                     <a href="/home">Home</a>
                 </li>
                 <li class="active">
-                    <strong>Products Edit</strong>
+                    <strong>Products Create</strong>
                 </li>
             </ol>
         </div>
@@ -41,40 +41,39 @@
                         <div id="tab-1" class="tab-pane active">
                             <div class="panel-body">
                                 <fieldset class="form-horizontal">
-                                    <form action="/admin/products/{{$product->id}}" method="POST" enctype="multipart/form-data">
-                                        <input type="hidden" name="_method" value="put" />
+                                    <form action="/admin/products" method="POST" enctype="multipart/form-data">
 
                                         <div class="form-group"><label class="col-sm-2 control-label">Product Name:</label>
-                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Product name" name="name" value="{{$product->name}}"></div>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Product name" name="name" ></div>
                                     </div>
                                     <div class="form-group"><label class="col-sm-2 control-label">Category:</label>
                                         <div class="col-sm-10">
                                             <select class="form-control" name="category_id">
                                                 @foreach($categories as $category)
-                                                <option value="{{$category->id}}" @if($product->category_id==$category->id)selected="selected"@endif>{{$category->name}}</option>
+                                                <option value="{{$category->id}}">{{$category->name}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                     </div>
 
                                     <div class="form-group"><label class="col-sm-2 control-label">分类页简介:</label>
-                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="分类页简介" name="category_des" value="{{$product->category_des}}"></div>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="分类页简介" name="category_des" ></div>
                                     </div>
                                     <div class="form-group"><label class="col-sm-2 control-label">产品页简介:</label>
-                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="产品页简介" name="des" value="{{$product->des}}"></div>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="产品页简介" name="des" ></div>
                                     </div>
 
                                     <div class="form-group"><label class="col-sm-2 control-label">Description:</label>
                                         <div class="col-sm-10">
-                                            <textarea class="form-control" rows="2" id="content" name="content">{!! $product->content !!}</textarea>
+                                            <textarea class="form-control" rows="2" id="content" name="content"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="form-group"><label class="col-sm-2 control-label">SEO:Meta Title:</label>
-                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Meta Title" name="title" value="{{$product->title}}"></div>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Meta Title" name="title" ></div>
                                     </div>
                                     <div class="form-group"><label class="col-sm-2 control-label">SEO:Meta Description:</label>
-                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Meta Description" name="description" value="{{$product->description}}"></div>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Meta Description" name="description" ></div>
                                     </div>
 
 

@@ -13,6 +13,8 @@ class Product extends Model
         'category_des',
         'des',
         'content',
+        'title',
+        'description',
     ];
 
     public function category()
