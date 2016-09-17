@@ -167,10 +167,28 @@
     </script>
 
     <script>
-        jQuery(document).ready(function() {
-            jQuery('#content').summernote({
-                height: 250
-            })})
-
+        $(document).ready(function() {
+            function sendFile(file, editor, welEditable) {
+                data = new FormData();
+                data.append("file", file);
+                $.ajax({
+                    data: data,
+                    type: "POST",
+                    url: "/summernote/file",
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function(url) {
+                        editor.insertImage(welEditable, url);
+                    }
+                });
+            }
+            $('#content').summernote({
+                height: 200,
+                onImageUpload: function(files, editor, welEditable) {
+                    sendFile(files[0], editor, welEditable);
+                }
+            });
+        });
     </script>
 @endsection
