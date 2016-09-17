@@ -35,13 +35,13 @@
                 <div class="tabs-container">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="ecommerce_product.html#tab-1"> Product info</a></li>
-                        <li class=""><a data-toggle="tab" href="ecommerce_product.html#tab-2"> Images</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane active">
                             <div class="panel-body">
                                 <fieldset class="form-horizontal">
                                     <form action="/admin/products/{{$product->id}}" method="POST" enctype="multipart/form-data">
+                                        {!! csrf_field() !!}
                                         <input type="hidden" name="_method" value="put" />
 
                                         <div class="form-group"><label class="col-sm-2 control-label">Product Name:</label>
@@ -60,6 +60,23 @@
                                     <div class="form-group"><label class="col-sm-2 control-label">分类页简介:</label>
                                         <div class="col-sm-10"><input type="text" class="form-control" placeholder="分类页简介" name="category_des" value="{{$product->category_des}}"></div>
                                     </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="category_pic">分类页主图（230*230）</label>
+                                            <div class="col-sm-10"><input name="category_pic" type="file" /></div>
+                                            @if($product['category_pic'])
+                                                <img src="{{$product['category_pic']}}" alt="{{$product['name']}}" width="200">
+                                            @endif
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="main_pic">产品主图（5:4左右）</label>
+                                            <div class="col-sm-10"><input name="main_pic" type="file" /></div>
+                                            @if($product['main_pic'])
+                                                <img src="{{$product['main_pic']}}" alt="{{$product['name']}}" width="200">
+                                            @endif
+                                        </div>
+
                                     <div class="form-group"><label class="col-sm-2 control-label">产品页简介:</label>
                                         <div class="col-sm-10"><input type="text" class="form-control" placeholder="产品页简介" name="des" value="{{$product->des}}"></div>
                                     </div>
@@ -77,67 +94,21 @@
                                         <div class="col-sm-10"><input type="text" class="form-control" placeholder="Meta Description" name="description" value="{{$product->description}}"></div>
                                     </div>
 
-
                                         <input type="submit" name="send" id="send" value="Publish" class="btn btn-sm btn-primary pull-right m-t-n-xs">
+                                    </form>
+                                    <form action="/admin/products/{{$product['id']}}" method="POST">
+                                        <input type="hidden" name="_method" value="delete" />
                                         {!! csrf_field() !!}
+                                        <script language="javascript">
+                                            function delcfm() {
+                                                if (!confirm("确认要删除？")) {
+                                                    window.event.returnValue = false;
+                                                }
+                                            }
+                                        </script>
+                                        <button type="submit" onClick="delcfm()" class="btn btn-sm btn-danger pull-right m-t-n-xs">Delete</button>
                                     </form>
                                 </fieldset>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane">
-                            <div class="panel-body">
-
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-stripped">
-                                        <thead>
-                                        <tr>
-                                            <th>
-                                                Image preview
-                                            </th>
-                                            <th>
-                                                Image url
-                                            </th>
-                                            <th>
-                                                Sort order
-                                            </th>
-                                            <th>
-                                                Actions
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="img/gallery/2s.jpg">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image1.png">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" value="1">
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="img/gallery/1s.jpg">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image2.png">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" value="2">
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -174,7 +145,7 @@
                 $.ajax({
                     data: data,
                     type: "POST",
-                    url: "/summernote/file",
+                    url: "/products/images/{{$product->id}}",
                     cache: false,
                     contentType: false,
                     processData: false,

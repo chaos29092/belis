@@ -35,7 +35,6 @@
                 <div class="tabs-container">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="ecommerce_product.html#tab-1"> Product info</a></li>
-                        <li class=""><a data-toggle="tab" href="ecommerce_product.html#tab-2"> Images</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane active">
@@ -59,6 +58,17 @@
                                     <div class="form-group"><label class="col-sm-2 control-label">分类页简介:</label>
                                         <div class="col-sm-10"><input type="text" class="form-control" placeholder="分类页简介" name="category_des" ></div>
                                     </div>
+
+                                     <div class="form-group">
+                                         <label class="col-sm-2 control-label" for="category_pic">分类页主图（230*230）</label>
+                                         <div class="col-sm-10"><input name="category_pic" type="file" /></div>
+                                     </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="main_pic">产品主图（5:4左右）</label>
+                                            <div class="col-sm-10"><input name="main_pic" type="file" /></div>
+                                        </div>
+
                                     <div class="form-group"><label class="col-sm-2 control-label">产品页简介:</label>
                                         <div class="col-sm-10"><input type="text" class="form-control" placeholder="产品页简介" name="des" ></div>
                                     </div>
@@ -81,62 +91,6 @@
                                         {!! csrf_field() !!}
                                     </form>
                                 </fieldset>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane">
-                            <div class="panel-body">
-
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-stripped">
-                                        <thead>
-                                        <tr>
-                                            <th>
-                                                Image preview
-                                            </th>
-                                            <th>
-                                                Image url
-                                            </th>
-                                            <th>
-                                                Sort order
-                                            </th>
-                                            <th>
-                                                Actions
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="img/gallery/2s.jpg">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image1.png">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" value="1">
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="img/gallery/1s.jpg">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" disabled value="http://mydomain.com/images/image2.png">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control" value="2">
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
                             </div>
                         </div>
                     </div>
