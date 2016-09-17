@@ -45,3 +45,4 @@ Route::resource('/admin/categories', 'CategoriesController');
 
 Route::get('home','ProductsController@index');
 
+

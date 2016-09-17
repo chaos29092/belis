@@ -159,34 +159,18 @@
     <script src="{{asset('backend/js/plugins/datapicker/bootstrap-datepicker.js')}}"></script>
 
     <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
 
-        $(document).ready(function(){
-//            $.ajaxSetup({
-//                headers: {
-//                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//                }
-//            });
-            $('#content').summernote({
-                height: 300,
-                placeholder:'Content here...'
-            });
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('#content').summernote({
+                height: 250
+            })})
 
-
-//        function uploadImage(file) {
-//            data = new FormData();
-//            data.append("file", file);
-//            $.ajax({
-//                data: data,
-//                type: 'POST',
-//                url: '/api/image',
-//                cache: false,
-//                contentType: false,
-//                processData: false,
-//                success: function (url) {
-//                    $('#content').summernote('insertImage', url);
-//                }
-//            });
-//        }
-        })
     </script>
 @endsection
