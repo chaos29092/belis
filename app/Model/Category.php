@@ -12,6 +12,7 @@ class Category extends Model
         'category_des',
         'title',
         'description',
+        'sort',
     ];
 
     public function products()

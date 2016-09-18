@@ -39,54 +39,18 @@
     </div>
     <div class="right xin_right">
         <div class="Deta_introd">
+            @foreach($categories as $category)
             <div class="p_list  marginr30">
                 <div class="img_center p_img">
-                    <a href="#"><img src="frontend/images/products/product_1.jpg" alt=""
+                    <a href="#"><img src="{{$category->category_pic}}" alt="{{$category->name}}"
                                                                     class="img_"/></a>
-                    <span class="span_"></span>
-                    <p class="sale ">SALE</p>
                 </div>
                 <dl class="p_wen">
-                    <dt><a href="#" title="">Diode Laser BM-108</a></dt>
-                    <dd class="p_conentet">Portable Diode Laser Hair Removal BM108 is the mos...</dd>
+                    <dt><a href="#" title="">{{$category->name}}</a></dt>
+                    <dd class="p_conentet">{{$category->category_des}}</dd>
                 </dl>
             </div>
-            <div class="p_list  marginr30">
-                <div class="img_center p_img">
-                    <a href=""><img src="frontend/images/products/product_1.jpg" alt=""
-                                                                    class="img_"/></a>
-                    <span class="span_"></span>
-                    <p class="sale ">SALE</p>
-                </div>
-                <dl class="p_wen">
-                    <dt><a href="" title="">Diode Laser BM-108</a></dt>
-                    <dd class="p_conentet">Portable Diode Laser Hair Removal BM108 is the mos...</dd>
-                </dl>
-            </div>
-            <div class="p_list  marginr30">
-                <div class="img_center p_img">
-                    <a href=""><img src="frontend/images/products/product_1.jpg" alt=""
-                                                                class="img_"/></a>
-                    <span class="span_"></span>
-                    <p class="sale ">SALE</p>
-                </div>
-                <dl class="p_wen">
-                    <dt><a href="" title="">IPL SHR BW-187</a></dt>
-                    <dd class="p_conentet">SHR stands for Super Hair Removal. Adopts Optimal ...</dd>
-                </dl>
-            </div>
-            <div class="p_list marginr0 marginr30">
-                <div class="img_center p_img">
-                    <a href=""><img src="frontend/images/products/product_1.jpg" alt=""
-                                                                class="img_"/></a>
-                    <span class="span_"></span>
-                    <p class="sale ">SALE</p>
-                </div>
-                <dl class="p_wen">
-                    <dt><a href="" title="">IPL SHR BW-186</a></dt>
-                    <dd class="p_conentet">SHR stands for Super Hair Removal. Adopts Optimal ...</dd>
-                </dl>
-            </div>
+            @endforeach
             <div class='clear'></div>
         </div>
     </div>

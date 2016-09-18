@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $categories = Category::orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->get();
+        return view('index',compact('categories'));
     }
 
     public function about_us()

@@ -47,6 +47,11 @@
                                         <div class="form-group"><label class="col-sm-2 control-label">Product Name:</label>
                                         <div class="col-sm-10"><input type="text" class="form-control" placeholder="Product name" name="name" value="{{$product->name}}"></div>
                                     </div>
+
+                                        <div class="form-group"><label class="col-sm-2 control-label">优先级，越小越前:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" name="sort" value="{{$product->sort}}"></div>
+                                        </div>
+
                                     <div class="form-group"><label class="col-sm-2 control-label">Category:</label>
                                         <div class="col-sm-10">
                                             <select class="form-control" name="category_id">

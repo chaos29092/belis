@@ -34,6 +34,7 @@ class CategoriesController extends Controller
 
         $category = New Category();
         $category->name = $request['name'];
+        $category->sort = $request['sort'];
         $category->category_des = $request['category_des'];
         $category->title = $request['title'];
         $category->description = $request['description'];
@@ -65,6 +66,7 @@ class CategoriesController extends Controller
         ]);
 
         $category->name = $request['name'];
+        $category->sort = $request['sort'];
         $category->category_des = $request['category_des'];
         $category->title = $request['title'];
         $category->description = $request['description'];

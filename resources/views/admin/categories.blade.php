@@ -38,7 +38,7 @@
                         <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
                             <thead>
                             <tr>
-
+                                <th data-toggle="true">Sort</th>
                                 <th data-toggle="true">Category Name</th>
                                 <th data-toggle="true">Category Description</th>
                                 <th data-hide="update">Update</th>
@@ -48,6 +48,9 @@
                             <tbody>
                             @foreach($categories as $category)
                                 <tr>
+                                    <td>
+                                        {{$category->sort}}
+                                    </td>
                                     <td>
                                         {{$category->name}}
                                     </td>

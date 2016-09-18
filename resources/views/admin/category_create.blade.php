@@ -43,6 +43,9 @@
                                     <div class="form-group"><label class="col-sm-2 control-label">分类简介(不超过20字):</label>
                                         <div class="col-sm-10"><input type="text" class="form-control" placeholder="分类简介" name="category_des" ></div>
                                     </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">优先级，越小越前:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" name="sort" value="50"></div>
+                                        </div>
 
                                      <div class="form-group">
                                          <label class="col-sm-2 control-label" for="category_pic">分类主图（230*230）</label>

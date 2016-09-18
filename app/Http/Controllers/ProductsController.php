@@ -19,7 +19,7 @@ class ProductsController extends Controller
 
     public function index()
     {
-        $products = Product::orderBy('updated_at', 'desc')->select('id','name','category_id','updated_at')->paginate(20);
+        $products = Product::orderBy('updated_at', 'desc')->select('id','name','category_id','updated_at','sort')->paginate(20);
         $categories = Category::all();
 
         return view('admin.products',compact('products','categories'));
@@ -42,6 +42,7 @@ class ProductsController extends Controller
         $product = New Product();
 
         $product->name = $request['name'];
+        $product->sort = $request['sort'];
         $product->title = $request['title'];
         $product->description = $request['description'];
         $product->category_id = $request['category_id'];
@@ -91,6 +92,7 @@ class ProductsController extends Controller
         ]);
 
         $product->name = $request['name'];
+        $product->sort = $request['sort'];
         $product->title = $request['title'];
         $product->description = $request['description'];
         $product->category_id = $request['category_id'];
