@@ -52,8 +52,8 @@ class ProductsController extends Controller
         if ($request->file('main_pic')) {
 
             $filePath = $request->file('main_pic');
-            $entension = $filePath->getClientOriginalExtension();
-            $key = 'product/' . $request->name . '.'.$entension;
+            $extension = $filePath->getClientOriginalExtension();
+            $key = 'product/' . $request->name . '.'.$extension;
 
             Storage::put($key,file_get_contents($request->file('main_pic')->getRealPath()));
 
@@ -62,8 +62,8 @@ class ProductsController extends Controller
         if ($request->file('category_pic')) {
 
             $filePath = $request->file('category_pic');
-            $entension = $filePath->getClientOriginalExtension();
-            $key = 'product/' . $request->name . '_category.'.$entension;
+            $extension = $filePath->getClientOriginalExtension();
+            $key = 'product/' . $request->name . '_category.'.$extension;
 
             Storage::put($key,file_get_contents($request->file('category_pic')->getRealPath()));
             $product->category_pic = '/app/'.$key;
@@ -101,8 +101,8 @@ class ProductsController extends Controller
         if ($request->file('main_pic')) {
 
             $filePath = $request->file('main_pic');
-            $entension = $filePath->getClientOriginalExtension();
-            $key = 'product/' . $request->name . '.'.$entension;
+            $extension = $filePath->getClientOriginalExtension();
+            $key = 'product/' . $request->name . '.'.$extension;
 
             Storage::delete(str_replace("/app/","",$product['main_pic']));
             Storage::put($key,file_get_contents($request->file('main_pic')->getRealPath()));
@@ -111,8 +111,8 @@ class ProductsController extends Controller
         if ($request->file('category_pic')) {
 
             $filePath = $request->file('category_pic');
-            $entension = $filePath->getClientOriginalExtension();
-            $key = 'product/' . $request->name . '_category.'.$entension;
+            $extension = $filePath->getClientOriginalExtension();
+            $key = 'product/' . $request->name . '_category.'.$extension;
 
             Storage::delete(str_replace("/app/","",$product['category_pic']));
             Storage::put($key,file_get_contents($request->file('category_pic')->getRealPath()));
@@ -132,6 +132,8 @@ class ProductsController extends Controller
         if ($product['category_pic']){
             Storage::delete(str_replace("/app/","",$product['category_pic']));
         }
+
+        Storage::deleteDirectory('products/'.$product->id);
 
         $product->delete();
         return redirect('/home');

@@ -41,6 +41,7 @@
                 </li>
                 <li>
                     <a href="/admin/products"><i class="fa fa-edit"></i> <span class="nav-label">Products</span></a>
+                    <a href="/admin/categories"><i class="fa fa-edit"></i> <span class="nav-label">Categories</span></a>
                 </li>
             </ul>
 

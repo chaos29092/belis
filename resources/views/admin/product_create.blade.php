@@ -5,7 +5,6 @@
     <link href="{{asset('backend/css/plugins/summernote/summernote.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/plugins/summernote/summernote-bs3.css')}}" rel="stylesheet">
 
-    <link href="{{asset('backend/css/plugins/datapicker/datepicker3.css')}}" rel="stylesheet">
 @endsection
 
 @section('header')
@@ -107,9 +106,6 @@
 @section('add_js')
     <!-- SUMMERNOTE -->
     <script src="{{asset('backend/js/plugins/summernote/summernote.min.js')}}"></script>
-
-    <!-- Data picker -->
-    <script src="{{asset('backend/js/plugins/datapicker/bootstrap-datepicker.js')}}"></script>
 
     <script>
 

@@ -10,13 +10,11 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@index');
+Route::get('about-us','HomeController@about_us');
+Route::get('faq','HomeController@faq');
+Route::get('contact-us','HomeController@contact_us');
 
-Route::get('about-us',function(){
-   return view('about_us');
-});
 
 Route::get('news',function(){
     return view('news_list');
@@ -39,13 +37,7 @@ Route::get('products/product_detail',function(){
     return view('product_detail') ;
 });
 
-Route::get('faq',function(){
-    return view('faq') ;
-});
 
-Route::get('contact-us',function(){
-    return view('contact_us') ;
-});
 
 Auth::routes();
 

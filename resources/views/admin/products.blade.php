@@ -1,8 +1,6 @@
 @extends('layouts.admin_master')
 
 @section('add_css')
-    <!-- FooTable -->
-    <link href="{{asset('backend/css/plugins/footable/footable.core.css')}}" rel="stylesheet">
 @endsection
 
 @section('header')
@@ -61,9 +59,23 @@
                                 </td>
                                 <td class="text-right">
                                     <div class="btn-group">
-                                        <button class="btn-white btn btn-xs">View</button>
-                                        <a href="/admin/products/{{$product->id}}/edit"><button class="btn-white btn btn-xs">Edit</button></a>
+                                        <a href="/products/{{$product->id}}" target="_blank"><button class="btn-success btn btn-xs">View</button></a>
+                                        <a href="/admin/products/{{$product->id}}/edit"><button class="btn-primary btn btn-xs">Edit</button></a>
                                     </div>
+                                </td>
+                                <td>
+                                    <form action="/admin/products/{{$product['id']}}" method="POST">
+                                        <input type="hidden" name="_method" value="delete" />
+                                        {!! csrf_field() !!}
+                                        <button type="submit" onClick="delcfm()" class="btn btn-xs btn-danger">Delete</button>
+                                        <script language="javascript">
+                                            function delcfm() {
+                                                if (!confirm("确认要删除？")) {
+                                                    window.event.returnValue = false;
+                                                }
+                                            }
+                                        </script>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

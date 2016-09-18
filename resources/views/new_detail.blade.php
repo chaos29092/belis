@@ -16,6 +16,6 @@
             <p>news content</p>
          </div>
     </div>
-    <div class="clear">
+    <div class="clear"></div>
 @endsection
 

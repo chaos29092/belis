@@ -38,6 +38,6 @@
         </div>
     </div>
 
-    <div class="clear">
+    <div class="clear"></div>
 @endsection
 
