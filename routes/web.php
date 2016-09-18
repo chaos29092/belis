@@ -1,20 +1,13 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
 Route::get('/', 'HomeController@index');
 Route::get('about-us','HomeController@about_us');
 Route::get('faq','HomeController@faq');
 Route::get('contact-us','HomeController@contact_us');
 
+Route::get('products','HomeController@all_products');
+Route::get('products/categories/{id}','HomeController@category');
+Route::get('products/{product}','HomeController@product_detail');
 
 Route::get('news',function(){
     return view('news_list');
@@ -25,20 +18,7 @@ Route::get('new_detail',function(){
 });
 
 
-Route::get('products',function(){
-   return view('products') ;
-});
-
-Route::get('products/category',function(){
-    return view('products_category') ;
-});
-
-Route::get('products/product_detail',function(){
-    return view('product_detail') ;
-});
-
-
-
+//admin
 Auth::routes();
 
 Route::resource('/admin/products', 'ProductsController');

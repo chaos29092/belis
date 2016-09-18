@@ -30,9 +30,9 @@
                 <div class="menu">
                     <div class="cate_title">Products</div>
                     <ul style="padding-bottom:26px" class="ulis">
-                        <li><a href="/products/category" title="Hair Removal System">Hair Removal System</a></li>
-                        <li><a href="#" title="Skin Rejuvenation System">Skin Rejuvenation System</a>
-                        </li>
+                        @foreach($categories as $category)
+                        <li><a href="/products/categories/{{$category->id}}" title="{{$category->name}}">{{$category->name}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <!--contact_us-->
