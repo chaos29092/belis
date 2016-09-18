@@ -56,6 +56,7 @@
                 <li><a href="/" title="Home">Home</a></li>
                 <li><a href="/about-us" title="About us">About us</a></li>
                 <li><a href="/products" title="Products">Products</a></li>
+                <li><a href="/news" title="News Center">News Center</a></li>
                 <li><a href="/faq" title="Service">FAQ</a></li>
                 <li><a href="/contact-us" title="Contact us">Contact us</a></li>
             </ul>

@@ -18,6 +18,15 @@ Route::get('about-us',function(){
    return view('about_us');
 });
 
+Route::get('news',function(){
+    return view('news_list');
+});
+
+Route::get('new_detail',function(){
+    return view('new_detail');
+});
+
+
 Route::get('products',function(){
    return view('products') ;
 });
@@ -45,5 +54,7 @@ Route::resource('/admin/categories', 'CategoriesController');
 
 Route::get('home','ProductsController@index');
 
-Route::post('products/images/{id}','ProductsController@image_upload');
+//summer note images upload and delete
+Route::post('admin/images/{id}','ProductsController@image_upload');
+Route::delete('admin/images','ProductsController@image_delete');
 

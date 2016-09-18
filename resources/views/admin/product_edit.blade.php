@@ -27,7 +27,6 @@
     </div>
 @endsection
 @section('content')
-
     <div class="wrapper wrapper-content animated fadeInRight ecommerce">
 
         <div class="row">
@@ -137,10 +136,14 @@
                                                 <img src="{{'/app/'.$f}}" width="100">
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" disabled value="{{url('/app/'.$f)}}">
+                                                <input type="text" class="form-control" disabled value="{{url('/app/'.$f)}}" >
                                             </td>
                                             <td>
-                                                <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                <form action="/admin/images" method="POST">
+                                                    {!! csrf_field() !!}
+                                                    {{ method_field('DELETE') }}
+                                                    <input type="hidden" name="file_name" value="{{$f}}" />
+                                                    <button type="submit" class="btn btn-white"><i class="fa fa-trash"></i> </button></form>
                                             </td>
                                         </tr>
                                         @endforeach
@@ -183,7 +186,7 @@
                 $.ajax({
                     data: data,
                     type: "POST",
-                    url: "/products/images/{{$product->id}}",
+                    url: "/admin/images/{{$product->id}}",
                     cache: false,
                     contentType: false,
                     processData: false,

@@ -152,4 +152,10 @@ class ProductsController extends Controller
             }
         }
     }
+
+    public function image_delete(Request $request)
+    {
+        Storage::delete($request['file_name']);
+        return back();
+    }
 }
