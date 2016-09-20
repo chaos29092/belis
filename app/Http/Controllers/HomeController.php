@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Category;
 use App\Model\Product;
+use App\Model\Page;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -61,5 +62,17 @@ class HomeController extends Controller
         $categories = Category::orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->get();
 
         return view('product_detail',compact('categories','product'));
+    }
+
+    public function news_list()
+    {
+        $news = Page::orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->where('tag','new')->paginate(30);
+
+        return view('news_list',compact('news'));
+    }
+
+    public function new_detail(Page $page)
+    {
+        return view('new_detail',compact('page'));
     }
 }

@@ -10,10 +10,10 @@
 @section('page_content')
     <div class="right xin_right">
         <div class="title">
-            News Title
+            {{studly_case($page->name)}}
         </div>
         <div class="Deta_introd" >
-            <p>news content</p>
+            {!! $page->content !!}
          </div>
     </div>
     <div class="clear"></div>

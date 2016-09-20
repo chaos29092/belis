@@ -9,13 +9,8 @@ Route::get('products','HomeController@all_products');
 Route::get('products/categories/{id}','HomeController@category');
 Route::get('products/{product}','HomeController@product_detail');
 
-Route::get('news',function(){
-    return view('news_list');
-});
-
-Route::get('new_detail',function(){
-    return view('new_detail');
-});
+Route::get('news','HomeController@news_list');
+Route::get('news/{page}','HomeController@new_detail');
 
 
 //admin
