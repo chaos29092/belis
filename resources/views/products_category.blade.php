@@ -1,5 +1,8 @@
 @extends('products_leftbar')
 
+@section('title',$category->name)
+@section('description',$category->description)
+
 @section('banner')
     <a href="#" title=""
        style="background:url({{asset('frontend/images/products.jpg')}}) no-repeat center center;"></a>
@@ -10,7 +13,7 @@
 @section('page_content')
     <div class="right xin_right">
         <div class="title">
-            <a href="#" title="" name="Toit25"></a>{{$category->name}}
+            <a href="#" title="" name="Toit25"></a>{{studly_case($category->name)}}
         </div>
         <div class="Deta_introd">
             @foreach($products as $product)

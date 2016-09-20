@@ -1,5 +1,8 @@
 @extends('leftbar')
 
+@section('title',$page->title)
+@section('description',$page->description)
+
 @section('banner')
     <a href="#" title=""
        style="background:url({{asset('frontend/images/about_us.jpg')}}) no-repeat center center;"></a>
@@ -10,10 +13,10 @@
 @section('page_content')
     <div class="right xin_right">
         <div class="title">
-            About us
+            {{$page->name}}
         </div>
         <div class="Deta_introd">
-            <p>About us content</p>
+            {!! $page->content !!}
         </div>
     </div>
 @endsection

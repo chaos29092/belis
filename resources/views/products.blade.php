@@ -1,5 +1,8 @@
 @extends('products_leftbar')
 
+@section('title','All Products')
+@section('description','IPL,E-light,beauty machine')
+
 @section('banner')
     <a href="#" title=""
        style="background:url({{asset('frontend/images/products.jpg')}}) no-repeat center center;"></a>

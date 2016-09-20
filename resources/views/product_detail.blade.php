@@ -1,5 +1,8 @@
 @extends('products_leftbar')
 
+@section('title',$product->title)
+@section('description',$product->description)
+
 @section('banner')
     <a href="#" title=""
        style="background:url({{asset('frontend/images/products.jpg')}}) no-repeat center center;"></a>
@@ -9,12 +12,12 @@
 
 @section('page_content')
     <div class="goods_right">
-        <div class="g_title">{{$product->name}}</div>
+        <div class="g_title">{{studly_case($product->name)}}</div>
         <div class="blank25"></div>
         <div class="img_center img_img zoom-small-image">
             <a href="{{$product->main_pic}}" class='cloud-zoom' id='zoom1' rel="adjustX:10, adjustY:-4"
                style="height: 502px;">
-                <img src="{{$product->main_pic}}" alt="IPL BW-185" class="img_"/>
+                <img src="{{$product->main_pic}}" alt="{{$product->name}}" class="img_"/>
             </a>
             <span class="span_"></span>
         </div>

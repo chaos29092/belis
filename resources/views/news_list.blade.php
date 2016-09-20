@@ -1,5 +1,8 @@
 @extends('leftbar')
 
+@section('title','News Center')
+@section('description','News Center')
+
 @section('banner')
     <a href="#" title=""
        style="background:url({{asset('frontend/images/news.jpg')}}) no-repeat center center;"></a>
@@ -16,7 +19,7 @@
             @foreach($news as $new)
             <div class="list_info">
                 <div class="img_centers">
-                    <a href="/news/{{$new->id}}"><img src="{{$new->main_pic}}" class="img_"/></a>
+                    <a href="/news/{{$new->id}}"><img src="{{$new->main_pic}}" title="{{$new->name}}" class="img_"/></a>
                     <span class="span_"></span>
                 </div>
                 <dl class="right_wen">

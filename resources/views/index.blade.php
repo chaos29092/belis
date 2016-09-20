@@ -1,5 +1,8 @@
 @extends('master')
 
+@section('title','Beauty Machine')
+@section('description','IPL,E-light...')
+
 @section('main')
 <!--banner-->
 <div id="banner">

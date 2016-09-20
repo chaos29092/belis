@@ -28,17 +28,20 @@ class HomeController extends Controller
 
     public function about_us()
     {
-        return view('about_us');
+        $page = Page::where('tag','page')->where('name','about us')->first();
+        return view('about_us',compact('page'));
     }
 
     public function faq()
     {
-        return view('faq');
+        $page = Page::where('tag','page')->where('name','faq')->first();
+        return view('faq',compact('page'));
     }
 
     public function contact_us()
     {
-        return view('contact_us');
+        $page = Page::where('tag','page')->where('name','contact us')->first();
+        return view('contact_us',compact('page'));
     }
 
     public function all_products()
@@ -75,4 +78,5 @@ class HomeController extends Controller
     {
         return view('new_detail',compact('page'));
     }
+
 }

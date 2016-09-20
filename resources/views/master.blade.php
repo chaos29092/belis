@@ -3,8 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
-    <meta name="description" content="des"/>
-    <title>belis laser beauty machines</title>
+    <title>@yield('title') - Belis</title>
+    <meta name="description" content="@yield('description')"/>
     <link href='{{asset('frontend/theme/default/css/style.css')}}' rel='stylesheet' type='text/css'/>
     <script type='text/javascript' src='{{asset('frontend/js/jquery-1.7.2.min.js')}}'></script>
     <script type='text/javascript' src='{{asset('frontend/theme/default/js/jquery.SuperSlide.html')}}'></script>

@@ -1,5 +1,8 @@
 @extends('leftbar')
 
+@section('title',$page->title)
+@section('description',$page->description)
+
 @section('banner')
     <a href="#" title=""
        style="background:url({{asset('frontend/images/news.jpg')}}) no-repeat center center;"></a>
