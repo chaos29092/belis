@@ -15,7 +15,6 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('name')->nullable();
             $table->string('title')->nullable();
             $table->string('description')->nullable();
@@ -23,6 +22,7 @@ class CreatePagesTable extends Migration
             $table->text('content')->nullable();
             $table->enum('tag',['new','page'])->nullable()->default('new');
             $table->integer('sort')->nullable()->default(50);
+            $table->timestamps();
         });
     }
 

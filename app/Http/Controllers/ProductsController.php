@@ -6,7 +6,6 @@ use App\Model\Product;
 use App\Model\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use Illuminate\Support\Facades\Input;
 use Storage;
 
 

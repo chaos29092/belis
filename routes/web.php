@@ -24,9 +24,15 @@ Auth::routes();
 Route::resource('/admin/products', 'ProductsController');
 Route::resource('/admin/categories', 'CategoriesController');
 
+//summer note pages images upload and delete
+Route::post('admin/pages/images/{id}','PagesController@image_upload');
+Route::delete('admin/pages/images','PagesController@image_delete');
+Route::resource('/admin/pages','PagesController');
+
 Route::get('home','ProductsController@index');
 
-//summer note images upload and delete
+//summer note products images upload and delete
 Route::post('admin/images/{id}','ProductsController@image_upload');
 Route::delete('admin/images','ProductsController@image_delete');
+
 
