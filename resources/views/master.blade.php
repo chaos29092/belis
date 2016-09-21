@@ -16,7 +16,6 @@
     <script type='text/javascript' src='{{asset('frontend/js/jquery-1.7.2.min.js')}}'></script>
     <script type='text/javascript' src='{{asset('frontend/js/global.js')}}'></script>
     <script type='text/javascript' src='{{asset('frontend/js/lang/en.js')}}'></script>
-    <script type='text/javascript' src='{{asset('frontend/theme/default/js/main.js')}}'></script>
     <script type='text/javascript' src='{{asset('frontend/theme/default/js/jq_cj.js')}}'></script>
     <script type='text/javascript' src='{{asset('frontend/theme/default/js/cloud-zoom.1.0.2.js')}}'></script>
 </head>
@@ -27,7 +26,7 @@
         <div class="header_ts">
             <ul class="contact" style="width:750px;">
                 <li class="dh">0086-18567660207</li>
-                <li class="email"><a href="mailto:info@belislaser.com">info@belislaser.com</a></li>
+                <li class="email"><a href="mailto:info@belislaserbeauty.com">info@belislaserbeauty.com</a></li>
             </ul>
             <ul class="hfx">
                 <li class="fx">
@@ -79,7 +78,7 @@
             </dl>
             <dl class="weiz fyj marginr0">
                 <dt>E-mail</dt>
-                <dd>info@belislaser.com</dd>
+                <dd>info@belislaserbeauty.com</dd>
             </dl>
         </div>
         <div class="xiap">

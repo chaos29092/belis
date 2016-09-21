@@ -4,6 +4,8 @@ Route::get('/', 'HomeController@index');
 Route::get('about-us','HomeController@about_us');
 Route::get('faq','HomeController@faq');
 Route::get('contact-us','HomeController@contact_us');
+Route::post('contact_submit','HomeController@submit');
+Route::get('submit_ok','HomeController@submit_ok');
 
 Route::get('products','HomeController@all_products');
 Route::get('products/categories/{id}','HomeController@category');

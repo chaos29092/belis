@@ -35,7 +35,7 @@
                     <div class="Phone cl">
                         Call us now:0086-18567660207
                     </div>
-                    <div class="Email cl">Email:info@belislaser.com</div>
+                    <div class="Email cl">Email:info@belislaserbeauty.com</div>
                 </div>
                 <div class="hot_p">
                     <div class="Titlt">Hot Products</div>

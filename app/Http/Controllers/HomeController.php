@@ -6,6 +6,7 @@ use App\Model\Category;
 use App\Model\Product;
 use App\Model\Page;
 use Illuminate\Http\Request;
+use Mail;
 
 class HomeController extends Controller
 {
@@ -77,6 +78,33 @@ class HomeController extends Controller
     public function new_detail(Page $page)
     {
         return view('new_detail',compact('page'));
+    }
+
+    public function submit(Request $request)
+    {
+        $form['name'] = $request->name;
+        $form['email']=$request->email;
+        $form['tel']=$request->tel;
+        $form['message']=$request->message;
+        $form['url']=$request->url;
+
+        Mail::send('emails.mail',['form'=>$form], function ($message) {
+            $message->from('web@belislaserbeauty.com', 'website');
+            $message->to(['sunny.belis@hotmail.com','info@belislaserbeauty.com','chaos29092@gmail.com',]);
+            $message->subject('Website Request');
+        });
+
+        return redirect('/submit_ok');
+    }
+
+    public function submit_ok()
+    {
+        return view('submit_ok');
+    }
+
+    public function sitemap()
+    {
+        echo simplexml_load_file('sitemap.xml')->asXML();
     }
 
 }

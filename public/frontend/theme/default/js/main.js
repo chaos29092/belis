@@ -1,7 +1,3 @@
-/*
-Powered by ly200.com		http://www.ly200.com
-广州联雅网络科技有限公司		020-83226791
-*/
 $(document).ready(function(){
 	//订阅
 	$('#newsletter').submit(function(){
@@ -26,35 +22,7 @@ $(document).ready(function(){
 	
 	$('#lib_down_list').delegate('li a', 'click', function(){window.location.href='/init.html?typ=download&DId='+$(this).attr('l');});
 
-	$('#lib_feedback_form').submit(function(){//在线留言提交处理
-		if(global_obj.check_form($(this).find('*[notnull]'))){return false;}
-		var e=$(this).find('input[name=Email]');
-		var float=$(this).find('input[name=float]');
-		e.removeAttr('style');
-		if(e.val()!='' && (/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(e.val())===false)){
-			e.css('border', '1px solid red');
-			e.focus();
-			global_obj.win_alert(lang_obj.format.email);
-			return false;
-		}
-		$(this).find('input:submit').attr('disabled', 'disabled');
-		
-		$.post('/init.html', 'typ=feedback&'+$(this).serialize(), function(data){
-			$('#lib_feedback_form form[name=feedback] input:submit').removeAttr('disabled');
-			global_obj.win_alert(data.msg);
-			if(data.status==1){
-				$('#lib_feedback_form input').val('');
-				$('#lib_feedback_form textarea').val('');
-				$('#lib_feedback_form .rows span img').click();
-			}else if(data.status==-1){
-				$('#lib_feedback_form input[name=VCode]').css('border', '1px solid red').val('').focus().siblings('img').click();
-			}else if(data.status==-2){
-				
-			}
-		},'json');
-		return false;
-	});
-	
+
 	$(".prod_info_pdf").click(function(){//PDF打印
 		$("#export_pdf").attr("src", "http://pdfmyurl.com?url="+window.location.href.replace(/^http[s]?:\/\//, ""));	
 	});
