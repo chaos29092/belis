@@ -33,7 +33,8 @@
                     <div class="Add cl">International Trade Building, hall 2, 2404, Rinmin Road, xigong district, Luoyang, Henan
                     </div>
                     <div class="Phone cl">
-                        Call us now:0086-18567660207
+                        Call us now:0086-18567660207 <br>
+                        Whatapp:86-18567660207
                     </div>
                     <div class="Email cl">Email:info@belislaserbeauty.com</div>
                 </div>
