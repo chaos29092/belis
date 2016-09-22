@@ -45,11 +45,11 @@
             @foreach($categories as $category)
             <div class="p_list  marginr30">
                 <div class="img_center p_img">
-                    <a href="#"><img src="{{$category->category_pic}}" alt="{{$category->name}}"
+                    <a href="/products/categories/{{$category->id}}"><img src="{{$category->category_pic}}" alt="{{$category->name}}"
                                                                     class="img_"/></a>
                 </div>
                 <dl class="p_wen">
-                    <dt><a href="#" title="">{{$category->name}}</a></dt>
+                    <dt><a href="/products/categories/{{$category->id}}" title="">{{$category->name}}</a></dt>
                     <dd class="p_conentet">{{$category->category_des}}</dd>
                 </dl>
             </div>

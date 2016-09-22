@@ -49,7 +49,7 @@
                                         </div>
 
                                      <div class="form-group">
-                                         <label class="col-sm-2 control-label" for="category_pic">分类主图（230*230）</label>
+                                         <label class="col-sm-2 control-label" for="category_pic">分类主图（287*230）</label>
                                          <div class="col-sm-2"><input name="category_pic" type="file" /></div>
                                          @if($category['category_pic'])
                                              <img class="col-sm-2" src="{{$category->category_pic}}" alt="">
