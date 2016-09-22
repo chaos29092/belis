@@ -53,6 +53,9 @@
                     <dd class="p_conentet">{{$category->category_des}}</dd>
                 </dl>
             </div>
+                @if(($loop->iteration)%4 == 0)
+                    <div class='clear'></div>
+                @endif
             @endforeach
             <div class='clear'></div>
         </div>

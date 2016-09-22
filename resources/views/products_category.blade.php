@@ -26,6 +26,9 @@
                         <dd class="p_conentet">{{$product->category_des}}</dd>
                     </dl>
                 </div>
+                @if(($loop->iteration)%3 == 0)
+                    <div class='clear'></div>
+                @endif
             @endforeach
             <div class='clear'></div>
         </div>
