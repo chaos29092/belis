@@ -23,7 +23,7 @@
                     <span class="span_"></span>
                 </div>
                 <dl class="right_wen">
-                    <dt><a href="/news/{{$new->id}}">{{studly_case($new->name)}}</a></dt>
+                    <dt><a href="/news/{{$new->id}}">{{ucwords($new->name)}}</a></dt>
                     <dd style="font-size:12px;margin:0">{{$new->updated_at}}</dd>
                     <dd>{{str_limit($new->description,30)}}</dd>
                 </dl>

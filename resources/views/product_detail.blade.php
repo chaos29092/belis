@@ -12,7 +12,7 @@
 
 @section('page_content')
     <div class="goods_right">
-        <div class="g_title">{{studly_case($product->name)}}</div>
+        <div class="g_title">{{ucwords($product->name)}}</div>
         <div class="blank25"></div>
         <div class="img_center img_img zoom-small-image">
             <a href="{{$product->main_pic}}" class='cloud-zoom' id='zoom1' rel="adjustX:10, adjustY:-4"

@@ -49,7 +49,7 @@
                                                                     class="img_"/></a>
                 </div>
                 <dl class="p_wen">
-                    <dt><a href="/products/categories/{{$category->id}}" title="">{{$category->name}}</a></dt>
+                    <dt><a href="/products/categories/{{$category->id}}" title="">{{ucwords($category->name)}}</a></dt>
                     <dd class="p_conentet">{{$category->category_des}}</dd>
                 </dl>
             </div>

@@ -13,7 +13,7 @@
 @section('page_content')
     <div class="right xin_right">
         <div class="title">
-            <a href="#" title="" name="Toit25"></a>{{studly_case($category->name)}}
+            <a href="#" title="" name="Toit25"></a>{{ucwords($category->name)}}
         </div>
         <div class="Deta_introd">
             @foreach($products as $product)

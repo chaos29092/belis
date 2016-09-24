@@ -13,7 +13,7 @@
 @section('page_content')
     <div class="right xin_right">
         <div class="title">
-            {{studly_case($page->name)}}
+            {{ucwords($page->name)}}
         </div>
         <div class="Deta_introd" >
             {!! $page->content !!}
