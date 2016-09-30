@@ -11,6 +11,7 @@ class Product extends Model
         'main_pic',
         'category_pic',
         'category_des',
+        'category_id',
         'des',
         'content',
         'title',
