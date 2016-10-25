@@ -66,34 +66,38 @@
 <div class="n_news">
     <div class="news">
         <div class="news_list">
-            <div class="news_title">news</div>
+            <div class="news_title">Hot Products</div>
             <div class="content">
                 <div class="c_img img_center">
-                    <a href="info/the-summary-commendation-congress-of-the-mid-year-2016_i0020.html"
+                    <a href="/products/21"
                        title="The summary commendation congress of the mid-year ..."><img
-                                src="frontend/images/news.jpg"
-                                alt="The summary commendation congress of the mid-year ..." class="img_"><span
+                                src="{{asset('frontend/images/index_hot_1.png')}}"
+                                alt="SHR: Permanent and fast hair removal. RF: Skin rejuvenation. ND yag laser: Tattoo removal." class="img_"><span
                                 class="span_"></span></a>
                 </div>
                 <dl class="n_wen">
-                    <dt><a href="info/the-summary-commendation-congress-of-the-mid-year-2016_i0020.html"
-                           title="The summary commendation congress of the mid-year ...">The summary commendation
-                            congress of the mid-year ...</a></dt>
-                    <dd class="w_wen"></dd>
-                    <dd><a href="info/the-summary-commendation-congress-of-the-mid-year-2016_i0020.html" class="read">READ
+                    <dt><a href="/products/21"
+                           title="SHR: Permanent and fast hair removal. RF: Skin rejuvenation. ND yag laser: Tattoo removal.">OPT SHR</a></dt>
+                    <dd class="w_wen">SHR: Permanent and fast hair removal. RF: Skin rejuvenation. ND yag laser: Tattoo removal.</dd>
+                    <dd><a href="/products/21" class="read">READ
                             MORE -</a></dd>
                 </dl>
             </div>
+
             <div class="content" style='margin:0'>
                 <div class="c_img img_center">
-                    <a href="info/2016-02-03_i0019.html" title="2016-02-03"><img src="frontend/images/news.jpg"
-                                                                                 alt="" class="img_"><span
+                    <a href="/products/40"
+                       title="The summary commendation congress of the mid-year ..."><img
+                                src="{{asset('frontend/images/index_hot_2.png')}}"
+                                alt="Hair removal; Skin rejuvenation." class="img_"><span
                                 class="span_"></span></a>
                 </div>
                 <dl class="n_wen">
-                    <dt><a href="info/2016-02-03_i0019.html" title="2016-02-03">2016-02-03</a></dt>
-                    <dd class="w_wen">Celebrating: Our maximum sales in January --- (HIFU)High Intensity Foc...</dd>
-                    <dd><a href="info/2016-02-03_i0019.html" class="read">READ MORE -</a></dd>
+                    <dt><a href="/products/40"
+                           title="SHR: Permanent and fast hair removal. RF: Skin rejuvenation. ND yag laser: Tattoo removal.">E-Light Vertical BL-E2</a></dt>
+                    <dd class="w_wen">Hair removal; Skin rejuvenation.</dd>
+                    <dd><a href="/products/40" class="read">READ
+                            MORE -</a></dd>
                 </dl>
             </div>
         </div>

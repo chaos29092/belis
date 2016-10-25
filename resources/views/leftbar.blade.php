@@ -44,31 +44,53 @@
                         <div class="cp_list">
                             <div class="cp_cp">
                                 <div class="img_center img_img">
-                                    <a href="../ipl-bw-185_p0046.html" title="IPL BW-185"><img
-                                                src="../u_file/1601/products/20/430b2a8a5b.jpg" class="img_"/><span
+                                    <a href="/products/40" title="E-Light BL-E2"><img
+                                                src="{{asset('frontend/images/hot_e2.jpg')}}" class="img_"/><span
                                                 class="span_"></span></a>
                                 </div>
                                 <dl>
-                                    <dt><a href="../ipl-bw-185_p0046.html" title="IPL BW-185">IPL BW-185</a></dt>
-                                    <dd>The Mini IPL Hair-removal syst...</dd>
-                                    <dd><a href="../ipl-bw-185_p0046.html" title="Leam More">Leam More</a></dd>
+                                    <dt><a href="/products/40" title="E-Light BL-E2">E-Light BL-E2</a></dt>
+                                    <dd>Hair removal; Skin rejuvenation.</dd>
+                                    <dd><a href="/products/40" title="Leam More">Leam More</a></dd>
                                 </dl>
                             </div>
                             <div class="cp_cp">
                                 <div class="img_center img_img">
-                                    <a href="../ultrasonic-peeling-machine-bm-705_p0047.html"
-                                       title="Ultrasonic Peeling Machine BM-705"><img
-                                                src="../u_file/1601/products/20/a74ddd1e26.jpg" class="img_"/><span
+                                    <a href="/products/40" title="Cryolipolisis"><img
+                                                src="{{asset('frontend/images/hot_cr1.jpg')}}" class="img_"/><span
                                                 class="span_"></span></a>
                                 </div>
                                 <dl>
-                                    <dt><a href="#"
-                                           title="Ultrasonic Peeling Machine BM-705">Ultrasonic Pe...</a></dt>
-                                    <dd>This equipment is designed for...</dd>
-                                    <dd><a href="#" title="Leam More">Leam
-                                            More</a></dd>
+                                    <dt><a href="/products/40" title="IPL BW-185">Cryolipolisis</a></dt>
+                                    <dd>Fat dissolving; Body shaping.</dd>
+                                    <dd><a href="/products/40" title="Leam More">Leam More</a></dd>
                                 </dl>
                             </div>
+                            <div class="cp_cp">
+                                <div class="img_center img_img">
+                                    <a href="/products/21" title="OPT SHR"><img
+                                                src="{{asset('frontend/images/hot_ml1.jpg')}}" class="img_"/><span
+                                                class="span_"></span></a>
+                                </div>
+                                <dl>
+                                    <dt><a href="/products/21" title="IPL BW-185">OPT SHR</a></dt>
+                                    <dd>Permanent,hair,Tattoo removal.Skin rejuvenation.</dd>
+                                    <dd><a href="/products/21" title="Leam More">Leam More</a></dd>
+                                </dl>
+                            </div>
+                            <div class="cp_cp">
+                                <div class="img_center img_img">
+                                    <a href="/products/34" title="BL-HIFU"><img
+                                                src="{{asset('frontend/images/hot_hifu.jpg')}}" class="img_"/><span
+                                                class="span_"></span></a>
+                                </div>
+                                <dl>
+                                    <dt><a href="/products/34" title="IPL BW-185">BL-HIFU</a></dt>
+                                    <dd>Skin lifting and tightening; wrinkles removal; Anti-aging.</dd>
+                                    <dd><a href="/products/34" title="Leam More">Leam More</a></dd>
+                                </dl>
+                            </div>
+
                         </div>
                     </div>
                 </div>
