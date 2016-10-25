@@ -28,13 +28,13 @@
             </div>
             <div class="blank20"></div>
             <div class="inquirys">
-                <a id="add_to_inquiry" href="/contact-us" class=" add_to_inquiry">Online inquiry</a>
-                <a href="/contact-us" title="">Contact us</a>
+                <a id="add_to_inquiry" href="/contact-us" class=" add_to_inquiry">{{trans('home.online_inquiry')}}</a>
+                <a href="/contact-us" title="">{{trans('home.contact_us')}}</a>
             </div>
         </div>
         <div class="clear"></div>
         <div class="Description">
-            <div class="d_title">Description</div>
+            <div class="d_title">{{trans('home.description')}}</div>
             <div class="content">
                 {!! $product->content !!}
             </div>
@@ -42,18 +42,18 @@
 
         {{--contact form--}}
         <div>
-            <div class="contact_title">Quick Contact</div>
+            <div class="contact_title">{{trans('home.quick_contact')}}</div>
             <div class="form-s">
                 <div id="lib_feedback_form">
                     <form method="post" action="/contact_submit">
                         {{csrf_field()}}
                         <input type="hidden" name="url" value="{{url()->current()}}">
                         <div class="rows">
-                            <p>Full Name<i>*</i></p>
+                            <p>{{trans('home.full_name')}}<i>*</i></p>
                             <input tpye="text" name="name" class="text_" required="">
                         </div>
                         <div class="rows marginr0">
-                            <p>Email Address<i>*</i></p>
+                            <p>{{trans('home.email_address')}}<i>*</i></p>
                             <input tpye="text" name="email" class="text_" style="width:306px;" required="" format="Email">
                         </div>
                         <div class="free">
@@ -61,7 +61,7 @@
                             <input tpye="text" name="tel" class="text_">
                         </div>
                         <div class="message">
-                            <p>Message<i>*</i></p>
+                            <p>{{trans('home.message')}}<i>*</i></p>
                             <textarea name="message" class="m_textarea" required></textarea>
                         </div>
                         <div class="skype">

@@ -28,7 +28,7 @@
             <!--left nav-->
             <div class="left">
                 <div class="menu">
-                    <div class="cate_title">Products</div>
+                    <div class="cate_title">{{trans('home.products')}}</div>
                     <ul style="padding-bottom:26px" class="ulis">
                         @foreach($categories as $category)
                         <li><a href="/products/categories/{{$category->id}}" title="{{$category->name}}">{{$category->name}}</a></li>
@@ -59,7 +59,7 @@
                                 </div>
                                 <dl>
                                     <dt><a href="/products/40" title="E-Light BL-E2">E-Light BL-E2</a></dt>
-                                    <dd>Hair removal; Skin rejuvenation.</dd>
+                                    <dd>{{trans('home.hot_product_1')}}</dd>
                                     <dd><a href="/products/40" title="Leam More">Leam More</a></dd>
                                 </dl>
                             </div>
@@ -71,7 +71,7 @@
                                 </div>
                                 <dl>
                                     <dt><a href="/products/40" title="IPL BW-185">Cryolipolisis</a></dt>
-                                    <dd>Fat dissolving; Body shaping.</dd>
+                                    <dd>{{trans('home.hot_product_2')}}</dd>
                                     <dd><a href="/products/40" title="Leam More">Leam More</a></dd>
                                 </dl>
                             </div>
@@ -83,7 +83,7 @@
                                 </div>
                                 <dl>
                                     <dt><a href="/products/21" title="IPL BW-185">OPT SHR</a></dt>
-                                    <dd>Permanent,hair,Tattoo removal.Skin rejuvenation.</dd>
+                                    <dd>{{trans('home.hot_product_3')}}</dd>
                                     <dd><a href="/products/21" title="Leam More">Leam More</a></dd>
                                 </dl>
                             </div>
@@ -95,7 +95,7 @@
                                 </div>
                                 <dl>
                                     <dt><a href="/products/34" title="IPL BW-185">BL-HIFU</a></dt>
-                                    <dd>Skin lifting and tightening; wrinkles removal; Anti-aging.</dd>
+                                    <dd>{{trans('home.hot_product_4')}}</dd>
                                     <dd><a href="/products/34" title="Leam More">Leam More</a></dd>
                                 </dl>
                             </div>

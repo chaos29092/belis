@@ -50,7 +50,7 @@
     </div>
     <div class="header_b">
         <div class="header_bs">
-            <div class="logo"><a href="index.html"><img src="{{asset('frontend/images/logo.png')}}"/></a></div>
+            <div class="logo"><a href="/"><img src="{{asset('frontend/images/logo.png')}}"/></a></div>
             <ul class="nav">
                 <li><a href="/" title="Home">Home</a></li>
                 <li><a href="/about-us" title="About us">About us</a></li>
@@ -69,8 +69,8 @@
     <div class="footer">
         <div class="top">
             <dl class="weiz diz">
-                <dt>Address</dt>
-                <dd>International Trade Building, hall 2, 2404, Rinmin Road, xigong district, Luoyang, Henan</dd>
+                <dt>{{trans('home.address')}}</dt>
+                <dd>{{trans('home.address_content')}}</dd>
             </dl>
             <dl class="weiz fdh">
                 <dt>Phones</dt>

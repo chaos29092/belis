@@ -1,7 +1,7 @@
 @extends('leftbar')
 
-@section('title','News Center')
-@section('description','News Center')
+@section('title',trans('title.new_center_title'))
+@section('description',trans('title.new_center_description'))
 
 @section('banner')
     <a href="#" title=""
@@ -13,7 +13,7 @@
 @section('page_content')
     <div class="right xin_right">
         <div class="title">
-            News Center
+            {{trans('home.new_center')}}
         </div>
         <div class="Deta_introd">
             @foreach($news as $new)

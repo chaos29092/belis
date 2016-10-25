@@ -8,7 +8,7 @@
        style="background:url({{asset('frontend/images/contact.jpg')}}) no-repeat center center;"></a>
 @endsection
 
-@section('page_name','Contact us')
+@section('page_name',trans('home.contact_us'))
 
 @section('page_content')
     <div class="right xin_right">
@@ -26,11 +26,11 @@
                         {{csrf_field()}}
                         <input type="hidden" name="url" value="{{url()->current()}}">
                         <div class="rows">
-                            <p>Full Name<i>*</i></p>
+                            <p>{{trans('home.full_name')}}<i>*</i></p>
                             <input tpye="text" name="name" class="text_" required="">
                         </div>
                         <div class="rows marginr0">
-                            <p>Email Address<i>*</i></p>
+                            <p>{{trans('home.email_address')}}<i>*</i></p>
                             <input tpye="text" name="email" class="text_" style="width:306px;" required="" format="Email">
                         </div>
                         <div class="free">
@@ -38,7 +38,7 @@
                             <input tpye="text" name="tel" class="text_">
                         </div>
                         <div class="message">
-                            <p>Message<i>*</i></p>
+                            <p>{{trans('home.message')}}<i>*</i></p>
                             <textarea name="message" class="m_textarea" required></textarea>
                         </div>
                         <div class="skype">

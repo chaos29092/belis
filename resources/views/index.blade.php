@@ -1,7 +1,7 @@
 @extends('master')
 
-@section('title','Beauty Machine')
-@section('description','IPL,E-light...')
+@section('title',trans('title.index_title'))
+@section('description',trans('title.index_description'))
 
 @section('main')
 <!--banner-->
@@ -66,19 +66,19 @@
 <div class="n_news">
     <div class="news">
         <div class="news_list">
-            <div class="news_title">Hot Products</div>
+            <div class="news_title">{{trans('home.hot_products')}}</div>
             <div class="content">
                 <div class="c_img img_center">
                     <a href="/products/21"
-                       title="The summary commendation congress of the mid-year ..."><img
+                       title="{{trans('home.hot_product_3')}}"><img
                                 src="{{asset('frontend/images/index_hot_1.png')}}"
-                                alt="SHR: Permanent and fast hair removal. RF: Skin rejuvenation. ND yag laser: Tattoo removal." class="img_"><span
+                                alt="{{trans('home.hot_product_3')}}" class="img_"><span
                                 class="span_"></span></a>
                 </div>
                 <dl class="n_wen">
                     <dt><a href="/products/21"
-                           title="SHR: Permanent and fast hair removal. RF: Skin rejuvenation. ND yag laser: Tattoo removal.">OPT SHR</a></dt>
-                    <dd class="w_wen">SHR: Permanent and fast hair removal. RF: Skin rejuvenation. ND yag laser: Tattoo removal.</dd>
+                           title="{{trans('home.hot_product_3')}}">OPT SHR</a></dt>
+                    <dd class="w_wen">{{trans('home.hot_product_3')}}</dd>
                     <dd><a href="/products/21" class="read">READ
                             MORE -</a></dd>
                 </dl>
@@ -87,33 +87,33 @@
             <div class="content" style='margin:0'>
                 <div class="c_img img_center">
                     <a href="/products/40"
-                       title="The summary commendation congress of the mid-year ..."><img
+                       title="{{trans('home.hot_product_1')}}"><img
                                 src="{{asset('frontend/images/index_hot_2.png')}}"
-                                alt="Hair removal; Skin rejuvenation." class="img_"><span
+                                alt="{{trans('home.hot_product_1')}}" class="img_"><span
                                 class="span_"></span></a>
                 </div>
                 <dl class="n_wen">
                     <dt><a href="/products/40"
-                           title="SHR: Permanent and fast hair removal. RF: Skin rejuvenation. ND yag laser: Tattoo removal.">E-Light Vertical BL-E2</a></dt>
-                    <dd class="w_wen">Hair removal; Skin rejuvenation.</dd>
+                           title="{{trans('home.hot_product_1')}}">E-Light Vertical BL-E2</a></dt>
+                    <dd class="w_wen">{{trans('home.hot_product_1')}}</dd>
                     <dd><a href="/products/40" class="read">READ
                             MORE -</a></dd>
                 </dl>
             </div>
         </div>
         <div class="contact">
-            <div class="contact_title">Quick Contact</div>
+            <div class="contact_title">{{trans('home.quick_contact')}}</div>
             <div class="form-s">
                 <div id="lib_feedback_form">
                     <form method="post" action="/contact_submit">
                         {{csrf_field()}}
                         <input type="hidden" name="url" value="{{url()->current()}}">
                         <div class="rows">
-                            <p>Full Name<i>*</i></p>
+                            <p>{{trans('home.full_name')}}<i>*</i></p>
                             <input tpye="text" name="name" class="text_" required="">
                         </div>
                         <div class="rows marginr0">
-                            <p>Email Address<i>*</i></p>
+                            <p>{{trans('home.email_address')}}<i>*</i></p>
                             <input tpye="text" name="email" class="text_" style="width:306px;" required="" format="Email">
                         </div>
                         <div class="free">
@@ -121,7 +121,7 @@
                             <input tpye="text" name="tel" class="text_">
                         </div>
                         <div class="message">
-                            <p>Message<i>*</i></p>
+                            <p>{{trans('home.message')}}<i>*</i></p>
                             <textarea name="message" class="m_textarea" required></textarea>
                         </div>
                         <div class="skype">

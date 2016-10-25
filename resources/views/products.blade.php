@@ -8,7 +8,7 @@
        style="background:url({{asset('frontend/images/products.jpg')}}) no-repeat center center;"></a>
 @endsection
 
-@section('page_name','Products')
+@section('page_name',trans('home.products'))
 
 @section('page_content')
         @foreach($categories as $category)

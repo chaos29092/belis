@@ -8,7 +8,7 @@
        style="background:url({{asset('frontend/images/about_us.jpg')}}) no-repeat center center;"></a>
 @endsection
 
-@section('page_name','About us')
+@section('page_name',trans('home.about_us'))
 
 @section('page_content')
     <div class="right xin_right">

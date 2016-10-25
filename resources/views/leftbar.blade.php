@@ -29,8 +29,8 @@
             <div class="left">
                 <!--contact_us-->
                 <div class="Contact_us">
-                    <div class="cate_title black_bg">Contact us</div>
-                    <div class="Add cl">International Trade Building, hall 2, 2404, Rinmin Road, xigong district, Luoyang, Henan
+                    <div class="cate_title black_bg">{{trans('home.contact_us')}}</div>
+                    <div class="Add cl">{{trans('home.address_content')}}
                     </div>
                     <div class="Phone cl">
                         Call us now:0086-18567660207 <br>
@@ -39,7 +39,7 @@
                     <div class="Email cl">Email:info@belislaserbeauty.com</div>
                 </div>
                 <div class="hot_p">
-                    <div class="Titlt">Hot Products</div>
+                    <div class="Titlt">{{trans('home.hot_products')}}</div>
                     <div class="cphide" style="margin-top: 22px;">
                         <div class="cp_list">
                             <div class="cp_cp">
@@ -50,7 +50,7 @@
                                 </div>
                                 <dl>
                                     <dt><a href="/products/40" title="E-Light BL-E2">E-Light BL-E2</a></dt>
-                                    <dd>Hair removal; Skin rejuvenation.</dd>
+                                    <dd>{{trans('home.hot_product_1')}}</dd>
                                     <dd><a href="/products/40" title="Leam More">Leam More</a></dd>
                                 </dl>
                             </div>
@@ -62,7 +62,7 @@
                                 </div>
                                 <dl>
                                     <dt><a href="/products/40" title="IPL BW-185">Cryolipolisis</a></dt>
-                                    <dd>Fat dissolving; Body shaping.</dd>
+                                    <dd>{{trans('home.hot_product_2')}}</dd>
                                     <dd><a href="/products/40" title="Leam More">Leam More</a></dd>
                                 </dl>
                             </div>
@@ -74,7 +74,7 @@
                                 </div>
                                 <dl>
                                     <dt><a href="/products/21" title="IPL BW-185">OPT SHR</a></dt>
-                                    <dd>Permanent,hair,Tattoo removal.Skin rejuvenation.</dd>
+                                    <dd>{{trans('home.hot_product_3')}}</dd>
                                     <dd><a href="/products/21" title="Leam More">Leam More</a></dd>
                                 </dl>
                             </div>
@@ -86,7 +86,7 @@
                                 </div>
                                 <dl>
                                     <dt><a href="/products/34" title="IPL BW-185">BL-HIFU</a></dt>
-                                    <dd>Skin lifting and tightening; wrinkles removal; Anti-aging.</dd>
+                                    <dd>{{trans('home.hot_product_4')}}</dd>
                                     <dd><a href="/products/34" title="Leam More">Leam More</a></dd>
                                 </dl>
                             </div>
