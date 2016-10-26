@@ -2,10 +2,10 @@
 
 return [
 
-    'index_title' => 'title',
-    'index_description'     => 'description',
+    'index_title' => 'IPL;CAVITATION;ND YAG LASER;HIFU.',
+    'index_description'     => 'DEPILACIóN; la eliminación de tatuajes; Cuerpo Adelgazar; rejuvenecimiento de la piel.',
 
-    'new_center_title'=>'title',
-    'new_center_description'=>'description',
+    'new_center_title'=>'Centro de Noticias',
+    'new_center_description'=>'Toda la información de nuestra empresa',
 
 ];

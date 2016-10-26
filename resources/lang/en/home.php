@@ -30,7 +30,4 @@ return [
     'submit_ok_1'=>'We are very glad to receive your message, and would reply as soon as possible.',
     'submit_ok_2'=>'Please check your mailbox after a while.',
     'submit_ok_3'=>'If you are urgent, you can dial our tel: 0086-18567660207',
-    ''=>'',
-    ''=>'',
-    ''=>'',
 ];

@@ -1,36 +1,33 @@
 <?php
 
 return [
-    'about_us' => 'About Us',
-    'contact_us'     => 'Contact Us',
-    'full_name'=>'Full Name',
-    'email_address'=>'Email Address',
-    'message'=>'Message',
+    'about_us' => 'Sobre Nosotros',
+    'contact_us'     => 'Contactarnos',
+    'full_name'=>'Nombre y Apellido',
+    'email_address'=>'E-mail',
+    'message'=>'Mensaje',
 
 //    master
-    'address'=>'Address',
+    'address'=>'Dirección',
     'address_content' =>'International Trade Building, hall 2, 2404, Rinmin Road, xigong district, Luoyang, Henan',
 //    leftbar
-    'hot_products'=>'Hot Products',
-    'hot_product_1'=>'Hair removal; Skin rejuvenation.',
-    'hot_product_2'=>'Fat dissolving; Body shaping.',
-    'hot_product_3'=>'Permanent,hair,Tattoo removal.Skin rejuvenation.',
-    'hot_product_4'=>'Skin lifting and tightening; wrinkles removal; Anti-aging.',
+    'hot_products'=>'Productos Calientes',
+    'hot_product_1'=>'Depilación; Rejuvenecimiento de la piel.',
+    'hot_product_2'=>'Disolución de la grasa; Moldeamiento corporal.',
+    'hot_product_3'=>'La depilación permanente y la eliminación de tatuajes permanente.Rejuvenecimiento de la piel.',
+    'hot_product_4'=>'Elevación de la piel y el endurecimiento; Eliminación de arrugas; Lucha contra el envejecimiento.',
 //    Index
-    'quick_contact'=>'Quick Contact',
+    'quick_contact'=>'Contacto Rápido',
 //    new center
-    'new_center'=>'News Center',
+    'new_center'=>'Centro de Noticias',
 //    product detail
-    'online_inquiry'=>'Online inquiry',
-    'description'=>'Description',
+    'online_inquiry'=>'Consulta en línea',
+    'description'=>'Descripción',
 //    products
-    'products'=>'Products',
+    'products'=>'Productos',
 //    submit_ok
-    'request_success'=>'Request Success!',
-    'submit_ok_1'=>'We are very glad to receive your message, and would reply as soon as possible.',
-    'submit_ok_2'=>'Please check your mailbox after a while.',
-    'submit_ok_3'=>'If you are urgent, you can dial our tel: 0086-18567660207',
-    ''=>'',
-    ''=>'',
-    ''=>'',
+    'request_success'=>'El éxito petición!',
+    'submit_ok_1'=>'Estamos muy contentos de recibir su mensaje, y contestaríamos tan pronto como sea posible.',
+    'submit_ok_2'=>'Por favor, consultar su correo electrónico después de un tiempo.',
+    'submit_ok_3'=>'Si usted es urgente, puede marcar el tel: 0086-18567660207',
 ];
