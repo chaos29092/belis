@@ -14,7 +14,7 @@ return [
     'hot_products'=>'Productos Calientes',
     'hot_product_1'=>'Depilación; Rejuvenecimiento de la piel.',
     'hot_product_2'=>'Disolución de la grasa; Moldeamiento corporal.',
-    'hot_product_3'=>'La depilación permanente y la eliminación de tatuajes permanente.Rejuvenecimiento de la piel.',
+    'hot_product_3'=>'La depilación permanente y la eliminación de tatuajes permanente.',
     'hot_product_4'=>'Elevación de la piel y el endurecimiento; Eliminación de arrugas; Lucha contra el envejecimiento.',
 //    Index
     'quick_contact'=>'Contacto Rápido',

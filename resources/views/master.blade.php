@@ -42,8 +42,8 @@
                                 src="{{asset('frontend/theme/default/images/header-fx5.jpg')}}"/></a>
                 </li>
                 <li class="langs">
-                    <a href="/" title="English" style="color:#f3fffc; font-weight:bold;">English</a>
-                    <a href="http://es.belislaser.com/" title="Español" style="color:#f3fffc;">| Español</a>
+                    <a href="http://www.belislaserbeauty.com" title="English" style="color:#f3fffc;">English</a>
+                    <a href="http://es.belislaserbeauty.com" title="Español" style="color:#f3fffc; font-weight:bold;">| Español</a>
                 </li>
             </ul>
         </div>
@@ -53,11 +53,11 @@
             <div class="logo"><a href="/"><img src="{{asset('frontend/images/logo.png')}}"/></a></div>
             <ul class="nav">
                 <li><a href="/" title="Home">Home</a></li>
-                <li><a href="/about-us" title="About us">About us</a></li>
-                <li><a href="/products" title="Products">Products</a></li>
-                <li><a href="/news" title="News Center">News Center</a></li>
+                <li><a href="/about-us" title="About us">{{trans('home.about_us')}}</a></li>
+                <li><a href="/products" title="Products">{{trans('home.products')}}</a></li>
+                <li><a href="/news" title="News Center">{{trans('home.new_center')}}</a></li>
                 <li><a href="/faq" title="Service">FAQ</a></li>
-                <li><a href="/contact-us" title="Contact us">Contact us</a></li>
+                <li><a href="/contact-us" title="Contact us">{{trans('home.contact_us')}}</a></li>
             </ul>
         </div>
     </div>
